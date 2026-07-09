@@ -100,4 +100,4 @@ For a remote reference, use the canonical URL:
 @https://github.com/molvqingtai/The-Absolute-Code/blob/master/README.md
 ```
 
-Use it as the coding, review, and refactoring standard: express the required behavior and constraints with minimum human-readable code through semantic naming.
+Use it as the coding, review, and refactoring standard paired with Loop Engineering: express the required behavior and constraints with minimum human-readable code through semantic naming.
