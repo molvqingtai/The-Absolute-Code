@@ -4,7 +4,7 @@ Coding agents can produce plausible code quickly. They also add helpers, wrapper
 
 Coding agents need an optimization objective, not another list of rules.
 
-The Absolute Code defines that objective: express the required behavior and constraints with minimum human-readable code (semantic naming).
+The Absolute Code defines that objective: express the required behavior and constraints with minimum human-readable code through semantic naming.
 
 **The only rule of The Absolute Code: minimum code.**
 
@@ -14,13 +14,13 @@ _If the same behavior and constraints can be expressed with less code, the extra
 
 How do we measure good code?
 
-By the minimum human-readable code (semantic naming) that expresses the same behavior and constraints. Good code is also physically minimum code.
+By the minimum human-readable code that expresses the same behavior and constraints, readable through semantic naming. Good code is also physically minimum code.
 
 If code satisfies the requirement and constraints, contains nothing extra, and remains readable through semantic naming, then it has reached that physical minimum.
 
-That is the convergence behind good code. Clean, elegant, maintainable, and well-designed are partial names for it. Abstractions, boundaries, structures, libraries, and models start from different problems, but when they are right they converge on this same shape.
+That is the convergence behind good code. Clean, elegant, maintainable, and well-designed are different words pointing at the same shape. Abstractions, boundaries, structures, libraries, and models start from different problems, but when they are right they converge here.
 
-This essay calls that shape minimum code. We did not invent it; we recognized the common denominator of good code. The best possible code cannot be proven, only approached. When behavior and constraints stay the same, less human-readable code with semantic naming is the practical standard for moving closer.
+We did not invent this shape; we recognized the common denominator of good code. The best possible code cannot be proven, only approached. When behavior and constraints stay the same, less human-readable code with semantic naming is the practical standard for moving closer.
 
 Because the shape is physical, it can be tested: keep behavior, constraints, and semantic naming fixed, then remove everything that can go.
 
@@ -32,7 +32,7 @@ What can be deleted without changing behavior?
 
 Hold behavior, constraints, and semantic naming fixed. Then ask what can disappear.
 
-Can state be derived instead of stored? Can a branch move to the boundary that owns the difference? Can a wrapper call the primitive directly? Can invalid data become impossible earlier? Can a trusted library replace this mechanism? Can an abstraction disappear because the concept has not appeared?
+Can state be derived instead of stored? Can a branch move to the boundary that owns the difference? Can a wrapper call the primitive directly? Can invalid data become impossible earlier? Can a trusted library replace this mechanism? Can a second truth collapse into one? Can an abstraction disappear because the concept has not appeared?
 
 If yes, the implementation has not reached minimum code. If no, the remaining code should point to a requirement, boundary, guarantee, failure state, or domain rule.
 
@@ -48,7 +48,7 @@ An abstraction earns its place when it deletes repetition, names a stable domain
 
 An abstraction that only forwards, wraps, renames, or splits direct logic across files is extra code. The reader now has more names, jumps, and places for behavior to hide. Wait until the program has proved the concept exists. Until then, direct code is stricter.
 
-OOP, functional programming, patterns, and libraries are implementation choices, not goals. Use whichever form preserves behavior, constraints, types, safety, errors, and verifiability with the least necessary human-readable code (semantic naming).
+OOP, functional programming, patterns, and libraries are implementation choices, not goals. Use whichever form preserves behavior, constraints, types, safety, errors, and verifiability with the least necessary human-readable code through semantic naming.
 
 ## Boundaries
 
@@ -68,7 +68,7 @@ Why does this feature feel harder than it should?
 
 Awkward code is often design feedback.
 
-If a feature requires wrappers, conversions, copied state, tunneling, repeated normalization, and exception branches in ordinary callers, the local code may not be the real problem. The source of truth may sit in the wrong layer, or the implementation may bypass a framework or domain primitive that already owns the behavior.
+If a feature requires wrappers, conversions, copied state, tunneling, repeated normalization, and exception branches in ordinary callers, the model is often the real source of complexity. The source of truth may sit in the wrong layer, or the implementation may bypass a framework or domain primitive that already owns the behavior.
 
 Good design shortens implementation because behavior lives where it belongs. Bad design moves complexity down until every caller compensates. When changing the model deletes adapters, synchronization paths, and exception branches, the model was the fix.
 
@@ -80,9 +80,9 @@ What happens if I delete this?
 
 Minimum code keeps the code that makes the program true.
 
-Types, validation, permissions, error handling, migration compatibility, observability, tests, and failure states can be necessary. Removing them may shorten the implementation, but it also removes guarantees. If deleting code hides a failure, breaks a migration, weakens a permission boundary, or makes behavior unverifiable, that code belongs.
+Types, validation, permissions, error handling, migration compatibility, observability, tests, and failure states can be necessary. Removing them may shorten the implementation, but it removes guarantees. If deleting code hides a failure, breaks a migration, weakens a permission boundary, or makes behavior unverifiable, that code belongs.
 
-Some products need complex code because the domain is complex. Minimum code does not demand a short file. It demands that every remaining piece of complexity comes from the domain, the requirement, or a required engineering constraint.
+Some products need complex code because the domain is complex. Minimum code does not demand a short file. It demands that every remaining piece of complexity come from the domain, the requirement, or a required engineering constraint—not from avoidable structure.
 
 Code golf fails. Dense code that hides boundaries, compresses meaning, or makes failure states hard to see leaves less text, not better code. Semantic naming is part of the standard.
 
@@ -100,4 +100,4 @@ For a remote reference, use the canonical URL:
 @https://github.com/molvqingtai/The-Absolute-Code/blob/master/README.md
 ```
 
-Use it as the coding, review, and refactoring standard: express the required behavior and constraints with minimum human-readable code (semantic naming).
+Use it as the coding, review, and refactoring standard: express the required behavior and constraints with minimum human-readable code through semantic naming.
